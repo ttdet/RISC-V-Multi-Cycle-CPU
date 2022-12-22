@@ -1,0 +1,29 @@
+NOTE: instructions will not work unless added after the ?start line
+Instruction format: name type opcode
+
+?start
+add S 00010
+addc C 00001
+addcsp C 00101
+and S 10110
+andc C 10101
+or S 01110
+orc C 10001
+sub S 00110
+sl C 01001
+sr C 01101
+lds S 11010
+wrs S 10010
+ssp C 00011
+sas S 10011
+ssa S 01111
+lpc S 00111
+lsp S 01011
+lu C 10100
+b C 11100
+beq S 00000
+bge S 00100
+bgt S 01000
+bneq S 01100
+bpc C 11111
+end C 11011

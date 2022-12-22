@@ -1,0 +1,5 @@
+Label:
+lds 8
+addc 1
+wrs 8
+bpc Label

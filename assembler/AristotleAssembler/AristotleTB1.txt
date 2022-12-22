@@ -1,0 +1,5 @@
+addcsp -2
+addc 20
+wrs 0
+addc -10
+wrs 0

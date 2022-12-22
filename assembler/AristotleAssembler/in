@@ -1,0 +1,61 @@
+RelPrime: 
+addcsp -2  
+andc 0 
+addc 2 
+wrs 0
+addcsp -3 
+Loop: 
+lds 6
+wrs 1 
+lds 3  
+wrs 2
+call gcd //lpc
+//addc
+//wrs
+//bpc
+andc 0 
+addc 1 
+wrs 4
+ld RPRet //lpc
+//addc
+beq 1 4
+lds 3 
+addc 1 
+wrs 3 
+bpc Loop
+RPRet: 
+lds 3 
+addcsp 5 
+wrs 1
+lds 0
+b 
+gcd: 
+addcsp -1 
+andc 0 
+wrs 0 
+ld while //lpc
+//addc
+bneq 0 2 
+lds 3 
+wrs 2 
+bpc exit
+while: 
+ld exit //lpc
+//addc
+beq 3 0 
+ld else //lpc
+//addc
+bge 3 2 
+lds 2 
+sub 3 
+wrs 2 
+bpc while
+else:
+lds 3 
+sub 2 
+wrs 3 
+bpc while
+exit:
+addcsp 1 
+lds 0
+b

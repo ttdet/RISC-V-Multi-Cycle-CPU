@@ -1,0 +1,14 @@
+// Iteratively adds 1 to sp+4 until it equals 10
+andc 0   // cr = 0
+wrs 4    // sp+4 = 0
+andc 10  // cr = 10
+wrs 5    // sp+5 = 10
+Loop:
+lds 4    // cr = sp+4
+addc 1   // cr = cr + 1
+wrs 4    // sp+4 = cr
+ld Loop  // cr = pc of Loop
+bneq 4 5 // if sp+4 != sp+5, pc = cr
+lds 4    // cr = sp+4
+wrs 0    // sp = cr
+end

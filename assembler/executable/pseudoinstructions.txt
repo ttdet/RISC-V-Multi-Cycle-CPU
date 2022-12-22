@@ -1,0 +1,7 @@
+NOTE: instructions will not work unless added after the ?start line
+Instruction format: psuedoName:firstInstruction,secondInstruction,...
+
+?start
+call:lpc,addc 6,wrs 0,bpc rs1
+ld:lpc,addc rs1
+addow:andc 0,lds rs1,add rs2
